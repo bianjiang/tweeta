@@ -2,6 +2,11 @@
 
 import os
 import sys
+import re
+import uuid
+from setuptools import setup, find_packages
+from pip.req import parse_requirements
+
 
 try:
     from setuptools import setup
@@ -10,13 +15,14 @@ except ImportError:
 
 __author__ = 'Jiang Bian <ji0ng.bi0n@gmail.com>'
 
-VERSIONFILE = "tweepy/__init__.py"
+VERSIONFILE = "tweeta/__init__.py"
 ver_file = open(VERSIONFILE, "rt").read()
 VSRE = r"^__version__ = ['\"]([^'\"]*)['\"]"
 mo = re.search(VSRE, ver_file, re.M)
 
 if mo:
     version = mo.group(1)
+    __version__ = version
 else:
     raise RuntimeError("Unable to find version string in %s." % (VERSIONFILE,))
     
