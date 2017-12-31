@@ -203,4 +203,10 @@ class TweetaTweet(object):
             return True
         else:
             return has_url(self.text())
+    
+    def is_valid(self):
+        ''' Whether the tweet contains all the root elements
+            ('text' in tweet and 'id' in tweet and 'created_at' in tweet and 'user' in tweet)
+        '''
+        return ('text' in self._tweet and 'id' in self._tweet and 'created_at' in self._tweet and 'user' in self._tweet)
         
