@@ -5,7 +5,7 @@ tweeta is a library for Python that helps to process data collected via Twitter 
 Questions, comments? ji0ng.bi0n@gmail.com
 """
 
-__version__ = '0.1.0'
+__version__ = '0.1.2'
 __author__ = 'Jiang Bian <ji0ng.bi0n@gmail.com>'
 
 from .tweet import TweetaTweet

@@ -65,7 +65,7 @@ class TweetaTweet(object):
         ''' Take full_text from extended tweet (default compatable mode for streaming api or 'full_text' in tweet, which replaces 'text' when use extended mode) https://developer.twitter.com/en/docs/tweets/tweet-updates
         '''
         if (not self._raw_text):
-            self._raw_text = self._tweet['extended_tweet']['full_text'] if ('extended_tweet' in self._tweet and self._tweet['extended_tweet'] and 'full_text' in self._tweet['extended_tweet']) else (self._tweet['full_text'] if 'full_text' in self._tweet else self._tweet['text'])            
+            self._raw_text = self._tweet['full_text'] if ('full_text' in self._tweet) else (self._tweet['extended_tweet']['full_text'] if ('extended_tweet' in self._tweet and self._tweet['extended_tweet'] and 'full_text' in self._tweet['extended_tweet']) else (self._tweet['text'] if 'text' in self._tweet else ''))            
         return self._raw_text               
     
     def fixed_text(self):
@@ -208,5 +208,5 @@ class TweetaTweet(object):
         ''' Whether the tweet contains all the root elements
             ('text' in tweet and 'id' in tweet and 'created_at' in tweet and 'user' in tweet)
         '''
-        return ('text' in self._tweet and 'id' in self._tweet and 'created_at' in self._tweet and 'user' in self._tweet)
+        return (('text' in self._tweet or 'full_text' in self._tweet) and 'id' in self._tweet and 'created_at' in self._tweet and 'user' in self._tweet)
         
