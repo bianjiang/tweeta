@@ -104,7 +104,7 @@ class TweetaTweet(object):
             Note that only 'RT @' is a true retweet.  There are cases where tweets started with 'RT' but they are not retweets.
             e.g., "RT IF U NOT FRIENDLY.."
         '''
-        return (self.text().lower().startswith('rt @') or ('retweeted_status' in self._tweet and self._tweet['retweeted_status']))
+        return (self.text().lower().startswith('rt @') or (True if 'retweeted_status' in self._tweet and self._tweet['retweeted_status'] else False))
     
     def has_retweeted_status(self):
         ''' Whether the `retweeted_status` is not null
