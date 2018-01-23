@@ -172,7 +172,7 @@ class TweetaTweet(object):
         if ('lang' in self._tweet and self._tweet['lang'].startswith('en')):
             return True
         elif ('lang' not in self._tweet):            
-            return (lang(self.test()) == 'en')
+            return (lang(self.text()) == 'en')
         else:
             return False
             
