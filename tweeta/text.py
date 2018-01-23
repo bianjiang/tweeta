@@ -13,19 +13,25 @@ FLAGS = re.MULTILINE | re.DOTALL | re.UNICODE
 URL_RE = re.compile(r"https?:\/\/\S+\b|www\.(\w+\.)+\S*", FLAGS)
 
 def remove_lb(text): #remove linebreaks  
+    ''' Remove linebreaks
+    '''
     return text.replace('\n\r',' ').replace('\r\n',' ').replace('\n',' ').replace('\r',' ').strip()
 
 def fix_text(text):
+    ''' ftfy.fix_text and remove linebreaks
+    '''
     return ftfy.fix_text(remove_lb(text))
 
 def remove_url(text):
+    ''' Remove url from text
+    '''
     return URL_RE.sub("", text)
 
 def replace_slash(text, sub= " "):
     return re.sub(r"/",sub, text, flags=FLAGS) #Force splitting words appended with slashes
 
 def sanitize_nofunccall(text):
-    ''' this is equivailant to replace_slash(remove_url(fix_text(text)))    
+    ''' This is equivailant to replace_slash(remove_url(fix_text(text)))    
     '''
     text = ftfy.fix_text(text.replace('\n\r',' ').replace('\r\n',' ').replace('\n',' ').replace('\r',' ').strip())
     text = URL_RE.sub("", text) # remove URL
@@ -49,9 +55,15 @@ VALID_MENTION += ')'
 VALID_MENTION += ')'
 
 MENTION_RE = re.compile(VALID_MENTION, re.MULTILINE | re.DOTALL | re.UNICODE)
-def extract_mentions(text):    
+def extract_mentions(text):
+    ''' Extract mentions from the text
+    '''
     return [m[2] for m in MENTION_RE.findall(text)]
 
+def remove_mentions(text):
+    ''' Remove mentions from the text
+    '''
+    return MENTION_RE.sub("", text)
 
 # extract hashtags
 NON_BMP_CODE_PAIRS = '[\uD800-\uDBFF][\uDC00-\uDFFF]'
@@ -98,7 +110,9 @@ VALID_HASHTAG = '(%s)((%s)(?!\uFE0F|\u20E3)(%s*%s%s*))'%(
 )
 
 HASHTAG_RE = re.compile(VALID_HASHTAG, re.MULTILINE | re.DOTALL | re.UNICODE | re.IGNORECASE)
-def extract_hashtags(text):    
+def extract_hashtags(text):
+    ''' Extract hashtags from the text
+    '''
     return [m[1] for m in HASHTAG_RE.findall(text)]
 
 
@@ -109,6 +123,8 @@ def extract_hashtags(text):
 import langid
 
 def lang(text):
+    ''' lang detection based on the text
+    '''
     l, prob = langid.classify(text)
     return l
 

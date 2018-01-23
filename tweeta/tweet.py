@@ -2,9 +2,10 @@
 
 """
 tweeta.tweet
-~~~~~~~~~~~
+~~~~~~~~~~~~
 This module contains functionality for extracting various data elements from a Tweet object 
 """
+
 import json
 import time
 
@@ -73,7 +74,7 @@ class TweetaTweet(object):
         '''
         if (not self._fixed_text):
             self._fixed_text = fix_text(self.text())
-        return self._fixed_text
+        return self._fixed_text        
     
     def tweet_id(self):
         ''' Get tweet id (from 'id_str' first if avaliable) otherwise use 'id'

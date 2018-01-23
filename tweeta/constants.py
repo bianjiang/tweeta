@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 
-'''Various constants related to Tweet
-'''
+"""
+tweeta.constants
+~~~~~~~~~~~~~~~~~~
+Various constants related to Tweet
+"""
 
 PARSE_TIME_FORMAT = '%a %b %d %H:%M:%S +0000 %Y'
 
