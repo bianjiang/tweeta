@@ -1,0 +1,288 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>tweeta &#8212; tweeta 0.1.5 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-tweeta.text">
+<span id="tweeta"></span><h1>tweeta<a class="headerlink" href="#module-tweeta.text" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tweeta-text">
+<h2>tweeta.text<a class="headerlink" href="#tweeta-text" title="Permalink to this headline">¶</a></h2>
+<p>This module contains utilities related to processing tweets</p>
+<dl class="function">
+<dt id="tweeta.text.extract_hashtags">
+<code class="descclassname">tweeta.text.</code><code class="descname">extract_hashtags</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.text.extract_hashtags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract hashtags from the text</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tweeta.text.extract_mentions">
+<code class="descclassname">tweeta.text.</code><code class="descname">extract_mentions</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.text.extract_mentions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract mentions from the text</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tweeta.text.fix_text">
+<code class="descclassname">tweeta.text.</code><code class="descname">fix_text</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.text.fix_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>ftfy.fix_text and remove linebreaks</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tweeta.text.has_url">
+<code class="descclassname">tweeta.text.</code><code class="descname">has_url</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.text.has_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tweeta.text.lang">
+<code class="descclassname">tweeta.text.</code><code class="descname">lang</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.text.lang" title="Permalink to this definition">¶</a></dt>
+<dd><p>lang detection based on the text</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tweeta.text.remove_lb">
+<code class="descclassname">tweeta.text.</code><code class="descname">remove_lb</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.text.remove_lb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove linebreaks</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tweeta.text.remove_mentions">
+<code class="descclassname">tweeta.text.</code><code class="descname">remove_mentions</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.text.remove_mentions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove mentions from the text</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tweeta.text.remove_url">
+<code class="descclassname">tweeta.text.</code><code class="descname">remove_url</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.text.remove_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove url from text</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tweeta.text.replace_slash">
+<code class="descclassname">tweeta.text.</code><code class="descname">replace_slash</code><span class="sig-paren">(</span><em>text</em>, <em>sub=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.text.replace_slash" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tweeta.text.sanitize_nofunccall">
+<code class="descclassname">tweeta.text.</code><code class="descname">sanitize_nofunccall</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.text.sanitize_nofunccall" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is equivailant to replace_slash(remove_url(fix_text(text)))</p>
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<span class="target" id="module-tweeta.tweet"></span><div class="section" id="tweeta-tweet">
+<h2>tweeta.tweet<a class="headerlink" href="#tweeta-tweet" title="Permalink to this headline">¶</a></h2>
+<p>This module contains functionality for extracting various data elements from a Tweet object</p>
+<dl class="class">
+<dt id="tweeta.tweet.TweetaTweet">
+<em class="property">class </em><code class="descclassname">tweeta.tweet.</code><code class="descname">TweetaTweet</code><span class="sig-paren">(</span><em>in_data</em><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.created_at">
+<code class="descname">created_at</code><span class="sig-paren">(</span><em>output_time_format='YMD'</em><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.created_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raw <cite>created_at</cite> are in constants.PARSE_TIME_FORMAT.  This converts the datetime to other formats, e.g., YMD (predefined) or %Y-%m-%d (user defined)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.fixed_text">
+<code class="descname">fixed_text</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.fixed_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fix some of the unicodes, and remove linebreaks [ftfy.fix_text(remove_lb(text)))]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>field_name</em><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>get arbitariry field values</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.has_quoted_status">
+<code class="descname">has_quoted_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.has_quoted_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the <cite>quoted_status</cite> is not null
+Note that <cite>quote</cite> is different from retweet, is_quote == has_quoted_status</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.has_retweeted_status">
+<code class="descname">has_retweeted_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.has_retweeted_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the <cite>retweeted_status</cite> is not null</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.has_url">
+<code class="descname">has_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.has_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the tweet contains urls (check entities first)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.hashtags">
+<code class="descname">hashtags</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.hashtags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use mentiones from <cite>entities</cite> first otherwise use text</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.is_deleted">
+<code class="descname">is_deleted</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.is_deleted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether th tweet has been deleted.  If the tweet is deleted, none of the other attributes will be populated</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.is_en">
+<code class="descname">is_en</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.is_en" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wether the tweet is written in English
+Use the <cite>lang</cite> attribute first if it exists, otherwise use langid</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.is_geotagged">
+<code class="descname">is_geotagged</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.is_geotagged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the tweet has been geo-tagged (either has <cite>geo</cite> or <cite>coordinates</cite> or <cite>place</cite>)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.is_quote">
+<code class="descname">is_quote</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.is_quote" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the tweet is a quote of another tweet (<cite>quoted_status</cite> is not null</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.is_retweet">
+<code class="descname">is_retweet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.is_retweet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the tweet is a retweet (either start with (‘RT|Rt|rT|rt &#64;’) or retweeted_status is not null )
+Note that there might be cases where a tweet is a retweet (starts with RT), but retweeted_status is not filled
+Note that only ‘RT &#64;’ is a true retweet.  There are cases where tweets started with ‘RT’ but they are not retweets.
+e.g., “RT IF U NOT FRIENDLY..”</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.is_user_en">
+<code class="descname">is_user_en</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.is_user_en" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the user is English speaking</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the tweet contains all the root elements
+(‘text’ in tweet and ‘id’ in tweet and ‘created_at’ in tweet and ‘user’ in tweet)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.json">
+<code class="descname">json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the raw json</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.mentions">
+<code class="descname">mentions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.mentions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use mentiones from <cite>entities</cite> first otherwise use text</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.text">
+<code class="descname">text</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take full_text from extended tweet (default compatable mode for streaming api or ‘full_text’ in tweet, which replaces ‘text’ when use extended mode) <a class="reference external" href="https://developer.twitter.com/en/docs/tweets/tweet-updates">https://developer.twitter.com/en/docs/tweets/tweet-updates</a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.tweet">
+<code class="descname">tweet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.tweet" title="Permalink to this definition">¶</a></dt>
+<dd><p>return the raw tweet object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.tweet_id">
+<code class="descname">tweet_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.tweet_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get tweet id (from ‘id_str’ first if avaliable) otherwise use ‘id’</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.user_description">
+<code class="descname">user_description</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.user_description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get user description, return empty string if it doesn’t exist</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tweeta.tweet.TweetaTweet.user_id">
+<code class="descname">user_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tweeta.tweet.TweetaTweet.user_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get user id (from tweet[‘user’][‘id_str’] first)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<span class="target" id="module-tweeta.constants"></span><div class="section" id="tweeta-constants">
+<h2>tweeta.constants<a class="headerlink" href="#tweeta-constants" title="Permalink to this headline">¶</a></h2>
+<p>Various constants related to Tweet</p>
+</div>
+<hr class="docutils" />
+<span class="target" id="module-tweeta.exceptions"></span><div class="section" id="tweeta-exceptions">
+<h2>tweeta.exceptions<a class="headerlink" href="#tweeta-exceptions" title="Permalink to this headline">¶</a></h2>
+<p>This module contains tweeta specific Exception classes.</p>
+<dl class="exception">
+<dt id="tweeta.exceptions.TweetaError">
+<em class="property">exception </em><code class="descclassname">tweeta.exceptions.</code><code class="descname">TweetaError</code><a class="headerlink" href="#tweeta.exceptions.TweetaError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>Generic error class, catch-all for most tweeta issues.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Jiang Bian.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
