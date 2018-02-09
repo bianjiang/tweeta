@@ -192,6 +192,11 @@ class TweetaTweet(object):
         '''
         return True if ('delete' in self._tweet) else False
     
+    def user_location(self):
+        ''' Get user location, return empty string if it doesn't exist
+        '''
+        return self._tweet['user']['location'] if ('user' in self._tweet and self._tweet['user'] and 'location' in self._tweet['user'] and self._tweet['user']['location']) else ''
+    
     def user_name(self):
         ''' Get user name, return empty string if it doesn't exist
         '''
