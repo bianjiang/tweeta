@@ -6,7 +6,7 @@ SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 SPHINXPROJ    = tweeta
 SOURCEDIR     = source
-BUILDDIR      = /home/ubuntu/workspace/html
+BUILDDIR      = output
 
 # Put it first so that "make" without argument is like "make help".
 help:

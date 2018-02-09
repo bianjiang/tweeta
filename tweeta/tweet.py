@@ -192,6 +192,16 @@ class TweetaTweet(object):
         '''
         return True if ('delete' in self._tweet) else False
     
+    def user_name(self):
+        ''' Get user name, return empty string if it doesn't exist
+        '''
+        return self._tweet['user']['name'] if ('user' in self._tweet and self._tweet['user'] and 'name' in self._tweet['user'] and self._tweet['user']['name']) else ''
+    
+    def user_screen_name(self):
+        ''' Get user screen name, return empty string if it doesn't exist
+        '''
+        return self._tweet['user']['screen_name'] if ('user' in self._tweet and self._tweet['user'] and 'screen_name' in self._tweet['user'] and self._tweet['user']['screen_name']) else ''
+    
     def user_description(self):
         ''' Get user description, return empty string if it doesn't exist
         '''
