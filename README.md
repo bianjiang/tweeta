@@ -17,4 +17,4 @@ python setup.py install
 
 ## Usage
 
-Take a look at the Jupyter [notebook](tweeta_test.ipynb) for various tests for now 
+Sphinx docs [here](https://bianjiang.github.io/tweeta/)
