@@ -14,6 +14,8 @@ from .exceptions import TweetaError
 from .constants import PARSE_TIME_FORMAT, OUTPUT_TIME_FORMAT
 from .text import fix_text, extract_mentions, extract_hashtags, lang, has_url
 
+from emoji import core
+
 class TweetaTweet(object):
     def __init__(self, in_data):
         '''TweetaTweet class to extract tweet-related information
@@ -37,6 +39,7 @@ class TweetaTweet(object):
         #### The following only get assigned when it first accessed
         self._raw_text = None #self.__raw_text()
         self._fixed_text = None #self.__fixed_text()
+        self._emoji_replaced_text = None
         self._id = None
         self._user_id = None
     
@@ -74,7 +77,15 @@ class TweetaTweet(object):
         '''
         if (not self._fixed_text):
             self._fixed_text = fix_text(self.text())
-        return self._fixed_text        
+        return self._fixed_text
+
+    def replace_emoji_in_text(self, string=""):
+        '''Using emoji package to replace all the emoji character with user defined string (default is "")
+           Note: this function by default will can fixed_text to fix the unicode first
+        '''
+        if (not self._emoji_replaced_text):
+            self._emoji_replaced_text = core.get_emoji_regexp().sub(string, fix_text(self.text()))
+        return self._emoji_replaced_text
     
     def tweet_id(self):
         ''' Get tweet id (from 'id_str' first if avaliable) otherwise use 'id'
