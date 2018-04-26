@@ -101,12 +101,12 @@ class TweetaTweet(object):
             self._user_id = self._tweet['user']['id_str'] if ('user' in self._tweet and self._tweet['user'] and 'id_str' in self._tweet['user']) else (self._tweet['user']['id'] if ('user' in self._tweet and self._tweet['user'] and 'id' in self._tweet['user']) else '')
         return self._user_id
 
-    def created_at(self, output_time_format = 'YMD', full_stamp = False):
+    def created_at(self, output_time_format = 'YMD', orign_stamp = False):
         ''' Raw `created_at` are in constants.PARSE_TIME_FORMAT.  This converts the datetime to other formats, e.g., YMD (predefined) or %Y-%m-%d (user defined)
         '''
-        if full_stamp:
+        if orign_stamp:
             return self.get('created_at')
-        
+
         t = time.strptime(self.get('created_at'), PARSE_TIME_FORMAT)
         if (output_time_format in OUTPUT_TIME_FORMAT):
             return time.strftime(OUTPUT_TIME_FORMAT[output_time_format], t)
