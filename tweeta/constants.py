@@ -13,6 +13,6 @@ OUTPUT_TIME_FORMAT = {
     'YM': '%Y%m',
     'Y-M': '%Y-%m',
     'YMD': '%Y%m%d',
-    'Y-M-D': '%Y-%m-%d'
+    'Y-M-D': '%Y-%m-%d',
+    'Y-M-D-H-M-S': '%Y-%m-%d-%H:%M:%S'
 }
-
