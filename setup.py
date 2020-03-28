@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 
 import os
+import pip
 import sys
 import re
 import uuid
+import pkg_resources
 from setuptools import setup, find_packages
-from pip.req import parse_requirements
-
 
 try:
     from setuptools import setup
@@ -25,9 +25,26 @@ if mo:
     __version__ = version
 else:
     raise RuntimeError("Unable to find version string in %s." % (VERSIONFILE,))
+
+
+def _parse_requirements(filepath):
+    pip_version = list(map(int, pkg_resources.get_distribution('pip').version.split('.')[:2]))
+    if pip_version >= [10, 0]:
+        #from pip._internal.download import PipSession
+        from pip._internal.req import parse_requirements
+        raw = parse_requirements(filepath, session='hack')
+    elif pip_version >= [6, 0]:
+        from pip.download import PipSession
+        from pip.req import parse_requirements
+        raw = parse_requirements(filepath, session=PipSession())
+    else:
+        from pip.req import parse_requirements
+        raw = parse_requirements(filepath)
+
+    return [str(i.req) for i in raw]
     
-install_reqs = parse_requirements('requirements.txt', session=uuid.uuid1())
-reqs = [str(req.req) for req in install_reqs]
+reqs = _parse_requirements('requirements.txt')
+#reqs = [str(req.req) for req in install_reqs]
 
 packages = [
     'tweeta'
